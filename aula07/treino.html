@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Duda</title>
+    <style>
+        body{
+            background: url('https://img.freepik.com/vetores-premium/adoravel-sapo-kawaii-em-um-padrao-sem-emenda-de-coracao-rosa-premium-vector_129604-1214.jpg?w=2000') right bottom no-repeat fixed;
+            background-size: cover;
+        }
+        div#resul{
+            font: normal 1em Arial;
+            width: 220px;
+            height: 150px;
+            background-color:lightpink;
+            border-radius: 15px;
+            margin: auto;
+            padding-top: 50px;
+            
+        }
+    </style>
+</head>
+<body>
+    <script>
+        var n1 = window.prompt('Digite um número:')
+        var n2 = window.prompt('digite outro:')
+        var duda = n1**n2*n1
+        document.write(`<div id='resul'>Pelos meu calculos com esses números você está me devendo ${duda} beijinhos<div>`)
+    </script>
+</body>
+</html>
