@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eventos DOM</title>
+    <style>
+        div#caixa{
+            font: normal 1.3em arial;
+            background-color: lightblue;
+            color: white;
+            width: 200px;
+            height: 200px;
+            line-height: 200px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div id="caixa" >
+        interaja...
+    </div>
+    <script>
+        var p = window.document.getElementById('caixa')
+        p.addEventListener('click', clicar)
+        p.addEventListener('mouseenter', entrar)
+        p.addEventListener('mouseout', sair)
+        function clicar(){
+            
+            p.innerHTML = 'clicou'
+            p.style.background = 'red'
+        }
+        function entrar(){
+            p.innerText = 'Entrou'
+        }
+        function sair(){
+            p.innerText = 'Saiu'
+            p.style.background ='lightblue'
+        }
+    </script>
+
+    
+</body>
+</html>
