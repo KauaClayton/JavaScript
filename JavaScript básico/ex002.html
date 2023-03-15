@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interação JS</title>
+    <style>
+        body{
+            font: normal 1em arial;
+        }
+
+        input#click{
+            height: 85px;
+            width: 170px;
+            font-size:16px;
+            background-color: rgba(211, 211, 211, 0.315);
+            border: 1px solid black ;
+        }
+    </style>
+</head>
+<body>
+    <h1>Interagindo com um botão</h1>
+    <input type="button" value="Clica em mim!" id="click" onclick="clicar()">
+    <script>
+        function clicar(){
+            window.alert('Você clicou no botão!')
+
+        }
+    </script>
+</body>
+</html>
