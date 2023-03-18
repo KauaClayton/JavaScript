@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body, input{
+            font:normal 1em arial
+        }
+        h1{
+            font-family: Pacifico, cursive;
+            font-size: 2em;
+        }
+        input{
+            margin-top: 11px;
+            width: 170px;
+            height: 83px;
+        }
+        div{
+            margin-top: 10px;
+        }
+    </style>
+    <title>Contador de cliques</title>
+</head>
+<body>
+    <h1>Contador de cliques</h1>
+    <input type="button" value="clique em mim" onclick="add()">
+    <input type="button" value="Zerar o contador" onclick="apagar()">
+    <div id="cont">O contador está com <mark>0</mark> cliques</div>
+    <script>
+        var div = window.document.querySelector('div#cont')
+        var num = 0
+        function add(){
+            num += 1
+            div.innerHTML = `O contador está com <mark id="num">${num}</mark> cliques`
+        }
+        function apagar(){
+            div.innerHTML = ''
+            num = 0
+        }
+    </script>
+    
+</body>
+</html>
