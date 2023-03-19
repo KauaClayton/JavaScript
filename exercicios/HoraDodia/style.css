@@ -10,6 +10,16 @@ div#caixa{
     border-radius: 10px;
 
 }
+div#img{
+    width: 250px;
+    height: 250px;
+    background-color: black;
+    margin: auto;
+    border-radius: 50%;
+    top: 20%;
+    background: center center no-repeat;
+    background-size: cover;
+}
 
 h1{
     text-align: center;
