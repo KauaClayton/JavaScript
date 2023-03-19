@@ -1,0 +1,13 @@
+@charset "utf-8";
+
+body,input {
+    font:normal 1em arial ;
+}
+h1{
+    font: bold 2em cursive;
+}
+
+input{
+    height: 78px;
+    width: 120px;
+}
