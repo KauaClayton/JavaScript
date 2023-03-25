@@ -1,0 +1,24 @@
+@charset "UTF-8";
+
+body{
+    font: normal 1.1em arial ;
+    background-color: rgb(118, 165, 192);
+}
+
+h1{
+    font-family: cursive;
+    color: white;
+    text-align: center;
+}
+
+input{
+    display: block;
+    height: 115px;
+    width: 170px;
+    margin: auto;
+}
+
+p{
+    text-align: center;
+    font-size: 1.3em;
+}

@@ -12,12 +12,11 @@ function verificar(){
         var sex = document.getElementsByName('radsex')
         var idade = ano - Number(Fano.value)
         var genero = ''
-        var img = document.createElement('img')
-        img.setAttribute('id', 'foto')
+        
         if(sex[0].checked){
             genero = 'Homem'
             if(idade >= 0 && idade < 10 ){
-                img.setAttribute('src', 'foto-bebe-m.png')
+                document.body.querySelector('div#img').style = 'background-image:url("http://apfel.com.br/wp-content/uploads/2021/01/flor-e-sol.jpg")'
             }
             else if(idade < 21){
                 
@@ -45,3 +44,5 @@ function verificar(){
         
     }
 }
+
+//não consegui fazer:/
