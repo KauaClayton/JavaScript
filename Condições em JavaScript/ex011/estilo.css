@@ -2,12 +2,13 @@
 
 body{
     font: normal 1.1em arial ;
-    background-color: rgb(118, 165, 192);
+    background-color: #76a5c0;
+ 
 }
 
 h1{
     font-family: cursive;
-    color: white;
+    color: #ffffff;
     text-align: center;
 }
 
