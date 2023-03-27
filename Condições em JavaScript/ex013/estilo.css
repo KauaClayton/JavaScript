@@ -1,0 +1,35 @@
+@charset "utf-8";
+
+body{
+    background-color: lightsteelblue;
+    font-family: Arial, Helvetica, sans-serif;
+}
+header h1{
+    font:normal 2.3em cursive;
+    text-align: center;
+    text-shadow: 1px 1px 1px black;
+
+}
+
+header p{
+    text-align: center;
+    font-size: 1.2em;
+
+}
+
+main input{
+    display: block;
+    width: 300px;
+    height: 150px;
+    margin: auto;
+    box-shadow: 0.5px 0.5px 4px black;
+    font-size: 1.3em;
+}
+main input:active{
+    background-color: lightgrey;
+}
+
+p#res{
+    text-align: center;
+    font-size: 1.2em;
+}
