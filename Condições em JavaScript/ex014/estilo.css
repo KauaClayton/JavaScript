@@ -10,7 +10,7 @@ header h1{
     font-size: 2em;
     text-shadow: 1px 1px 1px black;
 }
-header p{
+p{
     font-size:1.2em;
     text-align: center;
 }
@@ -26,3 +26,4 @@ main input{
 main input:active{
     background-color: lightgray;
 }
+
