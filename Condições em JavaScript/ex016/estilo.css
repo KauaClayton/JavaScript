@@ -1,0 +1,29 @@
+@charset "UTF-8";
+
+body{
+    font-style: arial;
+    background-color: rgb(132, 238, 180);
+}
+
+h1{
+    font-size: 1.7em;
+    font-family: cursive;
+    text-shadow: 0.5px 0.5px 0.5px black;
+    text-align: center;
+}
+p{
+    font-size: 1.2em;
+    text-align: center;
+}
+
+input{
+    display: block;
+    width: 300px;
+    height: 100px;
+    margin: auto;
+    box-shadow: 1px 1px 3px black;
+}
+
+input:active{
+    background-color: rgb(187, 187, 187);
+}
