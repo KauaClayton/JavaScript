@@ -1,0 +1,25 @@
+@charset "UTF-8";
+
+body{
+    font-size: 1.1em;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: cornflowerblue;
+}
+
+h1{
+    font-size: 1.5em;
+    text-align: center;
+    text-shadow: 0.5px 0.5px 0.5px black;
+}
+
+input{
+    width:200px;
+    height: 95px;
+    box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.493);
+}
+input:hover{
+    background-color: rgb(209, 209, 209);
+}
+input:active{
+    background-color: rgb(180, 180, 180);
+}
