@@ -1,0 +1,32 @@
+@charset "UTF-8";
+body{
+    background-color: lightblue;
+    font-family: arial;
+}
+h1{
+    font-size: 1.4em;
+    text-align: center;
+    text-shadow: 0.25px 0.25px 0.25px black;
+    font-family: cursive;
+}
+
+p{
+    font-size: 1.1em;
+    text-align: center;
+}
+
+input{
+    display: block;
+    margin: auto;
+    height: 98px;
+    width: 200px;
+    background-color: lightgoldenrodyellow;
+}
+
+input:hover{
+    background-color: rgb(240, 240, 184);
+}
+
+input:active{
+    background-color: rgb(241, 241, 131);
+}
