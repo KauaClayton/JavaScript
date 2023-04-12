@@ -1,0 +1,17 @@
+@charset "UTF-8";
+
+body{
+    background-color: lightslategrey;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+h1, h2{
+    font-family: cursive;
+}
+
+input{
+    display: block;
+    margin: auto;
+    width: 180px;
+    height: 90px;
+}
