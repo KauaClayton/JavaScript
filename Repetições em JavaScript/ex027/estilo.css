@@ -1,0 +1,27 @@
+@charset "UTF-8";
+
+body{
+    background-color: lightblue;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+h1{
+    text-align: center;
+}
+
+h1, h2{
+    font-family: cursive;
+}
+
+input[type=number]{
+    height: 25px;
+    width: 150px;
+    margin-left: 8px;
+}
+
+input[type=button]{
+    background-color: green;
+    color: white;
+    height: 30px;
+    width: 100px;
+}
