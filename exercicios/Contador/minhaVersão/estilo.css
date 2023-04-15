@@ -1,0 +1,44 @@
+@charset "UTF-8";
+
+body{
+    background-color: rgb(72, 151, 255);
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+h1{
+    text-align: center;
+}
+
+section{
+    position: absolute;
+    left: 25%;
+    top: 25%;
+    width: 50%;
+    box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.705);
+    height: 250px;
+    background-color: white;
+    border-radius: 10px;
+}
+section p{
+    position: relative;
+    top: 18%;
+    left: 3%;
+}
+
+input[type=number]{
+    
+    margin-left: 20px;
+
+}
+input[type=button]{
+    margin-top: 10px;
+    height: 40px;
+    width: 80px;
+}
+
+footer {
+    position: absolute;
+    top: 75%;
+    left: 42%;
+   font-size: 1.2em;
+}
