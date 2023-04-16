@@ -5,19 +5,25 @@ function Contador(){
     var incre = Number(document.querySelector('input#inc').value)
     var sec = document.querySelector('section#sec')
 
-    resp.innerHTML += '<p>Contando...</p>'
-    if(inicio < fim){
-        sec.style = 'Height:400px'
-        for(inicio; inicio <= fim; inicio += incre){
-            resp.innerHTML += `${inicio} \uD83D\uDC49`
-        }
-        resp.innerHTML += '\uD83C\uDFC1'
+    
+    if(incre == 0){
+        window.alert('Erro!!!!!!!Coloque um valor que é valido amigão!!!!!!!')
     }
-    else if(inicio > fim){
-        sec.style = 'Height: 400px'
-        for(inicio; inicio >= fim; inicio -= incre){
-            resp.innerHTML += `${inicio} \uD83D\uDC49`
+    else{
+        resp.innerHTML += '<p>Contando...</p>'
+            if(inicio < fim){
+            sec.style = 'Height:400px'
+            for(inicio; inicio <= fim; inicio += incre){
+                resp.innerHTML += `${inicio} \uD83D\uDC49`
+            }
+            resp.innerHTML += '\uD83C\uDFC1'
         }
-        resp.innerHTML += '\uD83C\uDFC1'
+        else if(inicio > fim){
+            sec.style = 'Height: 400px'
+            for(inicio; inicio >= fim; inicio -= incre){
+                resp.innerHTML += `${inicio} \uD83D\uDC49`
+            }
+            resp.innerHTML += '\uD83C\uDFC1'
+        }
     }
-}
+    }
