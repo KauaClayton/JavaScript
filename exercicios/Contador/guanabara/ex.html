@@ -5,17 +5,22 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="estilo.css">
-    <title>Contador</title>
+    <title>Super Contador</title>
 </head>
 <body>
     <header>
-        <h1>titulo</h1>
+        <h1>Vamos contar</h1>
     </header>
     <section>
-        <div></div>
-        <div></div>
+        <div id="dados">
+            <p>inicio: <input type="number" name="ini" id="ini"></p>
+            <p>Fim: <input type="number" name="fim" id="fim"> </p>
+            <p>Passo: <input type="number" name="pas" id="pas"></p>
+            <p><input type="button" value="contar" onclick="contar()"></p>
+        </div>
+        <div id="res">Preparando a contagem</div>
     </section>
-    <footer><p>&copy;</p></footer>
+    <footer><p>&copy;Kauã Clayton</p></footer>
     <script src="script.js"></script>
 </body>
 </html>
