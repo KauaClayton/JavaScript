@@ -11,14 +11,25 @@ h1{
 }
 
 section{
+    display: block;
+    width: 500px;
     background-color: white;
     padding: 20px;
     box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.473);
     border-radius: 7px;
+    margin: auto;
+}
+
+select{
+    width: 200px;
 }
 
 footer{
     font-style: italic;
     color: white;
     text-align: center;
+}
+
+input[type=button]{
+    margin: 0px;
 }
