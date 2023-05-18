@@ -2,13 +2,13 @@
 
 let n = 0
 let max = 100
+let pares = 0
 
-while(n < max){
-    console.log('CFB CURSOS' + n)
-    if(n > 10){
-        break
-    }
-    n++}
-    
-
-console.log('fim do programa')
+for(n; n < max; n++){
+    if(n%2!=0){
+        continue
+}
+    pares++
+}
+console.log(`Quantidade de pares:${pares}`)
+console.log('Fim do programa')
