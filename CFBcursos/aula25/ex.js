@@ -1,5 +1,3 @@
-"use strict"
+const f=new Function('v1','v2','v3','return v1+v2+v3')
 
-const f = function(...valores){ return valores.length}
-
-console.log(f(10, 5,  4, 2))
+console.log(f(10, 5, 8))
