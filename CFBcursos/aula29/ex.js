@@ -1,7 +1,16 @@
 "use strict"
 
-const cursos = ['HTML', 'CSS', 'JavaScript', 'PHP', 'React']
-cursos.map((el, i)=>{
-    console.log("curso:" + el +' - Posição:'+ i)
+const el = document.getElementsByTagName('div')
+el.map((ei, i)=>{
+    console.log(ei)
 })
+
+
+
+// const cursos = ['HTML', 'CSS', 'JavaScript', 'PHP', 'React']
+// var c = cursos.map((el, i)=>{
+//     return el
+// })
+
+// console.log(c)
 
