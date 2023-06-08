@@ -13,12 +13,16 @@ cursos.map((el)=>{el.addEventListener('click', (evt)=>{
 })})
 
 btn.addEventListener('click', ()=>{
-    const selecionados = [...document.querySelectorAll('.selecionado')]
+    const selecionados = [...document.querySelectorAll('.selecionado')]   
     selecionados.map((el)=>{
         caixa2.appendChild(el)
-        if(selecionados.includes(el) == false){
-            el.parentElement = caixa1
-        }       
     })
+    const child_caixa_2 = [...caixa2.children]
+    child_caixa_2.map((el)=>{
+        if(selecionados.includes(el) == false && child_caixa_2.includes(el) ==  true){
+                caixa1.appendChild(el)
+        }
+    })
+
 })
 
