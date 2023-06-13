@@ -5,6 +5,7 @@ const btn_c = [...document.querySelectorAll('.curso')]
 const c1_2 = document.querySelector('#c1_2')
 const cursos = ['HTML', 'CSS', 'JavaScript', 'PHP', 'React', 'MySQL', 'ReactNative']
 const btnCursoSeleciona = document.getElementById('btnCursoSelecionado')
+const  bntremover = document.getElementById('RemoverCurso')
 
 cursos.map((el, chave)=>{
     const novoel = document.createElement('div')
@@ -26,3 +27,32 @@ cursos.map((el, chave)=>{
 }
 
 )
+
+const radioselecionado = ()=>{
+    const todos = [...document.querySelectorAll('input[type=radio]')]
+    const radioselecionado = todos.filter((val, indice, array)=>{
+        return val.checked
+    })
+    return radioselecionado[0]
+}
+
+btnCursoSeleciona.addEventListener('click', (evt)=>{
+    var rs = radioselecionado()
+    console.log(rs)
+    try{
+        alert("curso selecionado:" + rs.parentNode.previousSibling.textContent)
+    }
+    catch(error){
+        alert('selecione algum curso')
+    }
+})
+
+bntremover.addEventListener('click', (evt)=>{
+    const rs = radioselecionado()
+    if(rs!=undefined){
+        const cursoselecionado = rs.parentNode.parentNode
+        cursoselecionado.remove(cursoselecionado)}
+    else{
+        alert('selecione um curso')
+    }
+})
