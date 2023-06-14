@@ -9,7 +9,9 @@ const  bntremover = document.getElementById('RemoverCurso')
 const btnAddAntes = document.getElementById('btnAdicionarNovoCursoAntes')
 const btnAdddps = document.getElementById('BtnAdicionarNovoCursoDepois')
 const curso = document.getElementById('nomeCurso')
+
 let indice = 0
+
 const criarcurso = (curso)=>{
     const novoel = document.createElement('div')
     novoel.setAttribute('class', 'curso c1')
@@ -39,17 +41,35 @@ cursos.map((el)=>{
 )
 
 const elementoselecionado = ()=>{
+    let selecionar = [...caixaCursos.children] 
+    let selecionado = []
+    selecionar.map((el)=>{
+        el.addEventListener('click', ()=>{
+            console.log(el)
+            if(el.classList.contains('selecionado') == false ){
+                el.classList.add('selecionado')
+                return selecionado.push(el.textContent)}
+            else{el.classList.remove('selecionado')}
+        })
+    
+    })
     
 }
+        // el.addEventListener('click',()=>{
+        //     console.log(el)
+        //     return el.classList.toggle('selecionado')
 
-btnCursoSeleciona.addEventListener('click', (evt)=>{
-    var rs = elementoselecionado()
-    console.log(rs)
+
+elementoselecionado()
+
+btnCursoSeleciona.addEventListener('click', ()=>{
+    let ele = elementoselecionado()
+    console.log(ele)
     try{
-        alert("curso selecionado:" + rs.parentNode.previousSibling.textContent)
+        console.log('ta no caminho certo' + ele)
     }
     catch(error){
-        alert('selecione algum curso')
+        alert('selecione algumm curso')
     }
 })
 
