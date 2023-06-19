@@ -11,7 +11,13 @@ const btnAdddps = document.getElementById('BtnAdicionarNovoCursoDepois')
 const curso = document.getElementById('nomeCurso')
 
 let indice = 0
+const tirarselecao = ()=>{
+    const cursosSelecionados = [...document.querySelectorAll('.selecionado')]
+    cursosSelecionados.map((el)=>{
+        el.classList.remove('selecionado')
+    })
 
+}
 const criarcurso = (curso)=>{
     const novoel = document.createElement('div')
     novoel.setAttribute('class', 'curso c1')
@@ -21,12 +27,11 @@ const criarcurso = (curso)=>{
 
     const comandos = document.createElement('div')
     comandos.setAttribute('class', 'comandos')
-
-    const rb = document.createElement('input')
-    rb.setAttribute('type', 'radio')
-    rb.setAttribute('name', 'rb_curso')
-
-    comandos.appendChild(rb)
+    
+    novoel.addEventListener('click', (evt)=>{
+        tirarselecao()
+        evt.target.classList.toggle('selecionado')
+    })
 
     novoel.appendChild(comandos)
 
@@ -40,57 +45,42 @@ cursos.map((el)=>{
 
 )
 
-const elementoselecionado = ()=>{
-    let selecionar = [...caixaCursos.children] 
-    let selecionado = []
-    selecionar.map((el)=>{
-        el.addEventListener('click', ()=>{
-            console.log(el)
-            if(el.classList.contains('selecionado') == false ){
-                el.classList.add('selecionado')
-                return selecionado.push(el.textContent)}
-            else{el.classList.remove('selecionado')}
-        })
-    
-    })
-    
-}
-        // el.addEventListener('click',()=>{
-        //     console.log(el)
-        //     return el.classList.toggle('selecionado')
+const cursoselecionado = ()=>{
+    const cursosSelecionados = [...document.querySelectorAll('.selecionado')]
+    return cursosSelecionados[0]
+        }
 
 
-elementoselecionado()
 
 btnCursoSeleciona.addEventListener('click', ()=>{
-    let ele = elementoselecionado()
-    console.log(ele)
+    let ele = cursoselecionado()
+
     try{
-        console.log('ta no caminho certo' + ele)
+        const cursoselecionado = ele
+        alert(`Curso selecionado:${ele.textContent}`)
     }
     catch(error){
-        alert('selecione algumm curso')
+        alert('selecione algum curso')
     }
+
 })
 
 bntremover.addEventListener('click', (evt)=>{
-    const rs = elementoselecionado()
-    if(rs!=undefined){
-        const cursoselecionado = rs.parentNode.parentNode
-        cursoselecionado.remove(cursoselecionado)}
+    const ele = cursoselecionado()
+    if(ele!=undefined){
+
+        ele.remove(cursoselecionado)}
     else{
         alert('selecione um curso')
     }
 })
 
 btnAddAntes.addEventListener('click', ()=>{
-    var rs = elementoselecionado()
 
     try{
-        const cursoselecionado = rs.parentNode.parentNode
         if(curso.value != ''){
             const novocurso = criarcurso(curso.value)
-            caixaCursos.insertBefore(novocurso, cursoselecionado)}
+            caixaCursos.insertBefore(novocurso, cursoselecionado())}
         else{alert('digite o nome do curso')}
 
     }
@@ -100,13 +90,13 @@ btnAddAntes.addEventListener('click', ()=>{
 })
 
 btnAdddps.addEventListener('click', ()=>{
-    var rs = elementoselecionado()
+
 
     try{
-        const cursoselecionado = rs.parentNode.parentNode
+   
         if(curso.value != ''){
         const novocurso = criarcurso(curso.value)
-        caixaCursos.insertBefore(novocurso, cursoselecionado.nextSibling)}
+        caixaCursos.insertBefore(novocurso, cursoselecionado().nextSibling)}
         else{alert('digite o nome do curso')}
 
     }
