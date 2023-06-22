@@ -1,0 +1,30 @@
+@charset "utf-8";
+
+*{
+    padding: 0px;
+    margin: 2px;
+    border: none;
+    box-sizing: border-box;
+    font-size: large;
+}
+
+button{
+    background-color: rgba(231, 231, 231, 0.562);
+    border-radius: 8px;
+    margin: 5px;
+    padding: 7px 17px;
+    border: 0.5px solid black;
+    cursor: pointer;
+}
+
+input[type=number], div{
+    background-color: rgba(192, 190, 190, 0.562);
+    width: 97vw;
+    margin-left: 3px;
+    padding: 5px;
+}
+
+input::-webkit-outer-spin-button, input::-webkit-inner-spin-button{
+    margin: 0px;
+    display: none;
+}
