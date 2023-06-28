@@ -6,7 +6,9 @@ const munição = document.querySelector('#f_municao')
 const blindagem = document.querySelector('#f_blindagem')
 const carros = document.querySelector('#carros')
 const botao = document.querySelector('#btn_addCarro')
-
+const lixeira = document.createElement('img')
+lixeira.setAttribute('src', 'https://images.emojiterra.com/mozilla/512px/1f5d1.png')
+lixeira.setAttribute('class', 'imagem')
 let array_carros = []
 tipomilitar.addEventListener('click', (evt)=>{
     nome.value = ''
@@ -40,6 +42,8 @@ const gerenciarexibiton = ()=>{
             div.innerHTML += `<br> Munição:${el.munição}`
         }
         carros.appendChild(div)
+        
+        div.appendChild(lixeira)
     })
 }
 
@@ -55,6 +59,11 @@ botao.addEventListener('click', ()=>{
     gerenciarexibiton()
 })
 
+lixeira.addEventListener('click', ()=>{
+    apagar = lixeira.parentElement
+    apagar.remove()
+    
+})
 
 class Carro{ //classe pai / base
     constructor(nome, portas){

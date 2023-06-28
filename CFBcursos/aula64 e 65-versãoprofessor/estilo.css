@@ -47,10 +47,13 @@
 
 }
 
-.botaolixo{
-    background-color: #BBB;
-    width: 90%;
-    display: flex;
-    align-items: flex-start;
+.imagem{
+    height: 50px;
+    width: 60px;
+    cursor: pointer;
 }
 
+.carro{
+    display: flex;
+    flex-direction: column;
+}
