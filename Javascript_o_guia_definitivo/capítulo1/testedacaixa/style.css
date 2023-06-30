@@ -1,0 +1,12 @@
+@charset "UTF-8";
+
+#div{
+    width: 300px;
+    height: 180px;
+    display: block;
+    margin: auto;
+    cursor: pointer;
+    background-color: lightblue;
+    text-align: center;
+    font-size: 2em;
+}
