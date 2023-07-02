@@ -38,8 +38,10 @@ div#div_display{
 }
 
 div#div_display p {
-    font-size: 1.4em;
+    font-size: 1.8em;
     margin-right: 5px;
+    font-family: monospace;
+
     
 }
 
