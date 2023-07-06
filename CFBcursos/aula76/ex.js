@@ -17,6 +17,7 @@ promise.then((retorno)=>{
     numero.innerHTML =  retorno
     numero.classList.remove('error')
     numero.classList.add('ok')
+    window.close()
 })
 //rejec saiu
 promise.catch((retorno)=>{
