@@ -1,0 +1,87 @@
+@charset "UTF-8";
+
+*{
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
+}
+body{
+    width: 98vw;
+    height: 98vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: lightblue;
+}
+main{
+    display: flex;
+    background-color: white;
+    height: 400px;
+    flex-direction: column;
+    flex-wrap: wrap;
+    padding: 5px;
+    border-radius: 7px;
+    box-shadow: 1px 2px 11px 0px black;
+}
+h1{
+    font-family: monospace;
+    color: rgba(0, 0, 0, 0.438);
+}
+#form{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    height: 90%;
+}
+#email{
+   margin-bottom: 10px;
+    font-size: 1.5em;
+}
+input[type='email']{
+    border-radius: 3px;
+    padding: 7px;
+    height: 27px;
+    margin-bottom: 10px;
+}
+
+#senha{
+    margin-bottom: 10px;
+    font-size: 1.5em;
+}
+
+input[type='text']{
+    border-radius: 3px;
+    padding: 7px;
+    height: 27px;
+}
+
+#button{
+    width: 120px;
+    height: 40px;
+    border-radius: 5px;
+    font-size: 1.2em;
+    box-shadow: 0.5px 0.5px 0.5px rgba(0, 0, 0, 0.336);
+    cursor: pointer;
+}
+
+#button:active{
+    background-color: white;
+    border-color: red;
+}
+
+#resul{
+    margin-top: 20px;
+    font-size: 1.3em;
+}
+
+.true{
+
+    color: blue;
+}
+
+.false{
+  
+    color:red
+}
