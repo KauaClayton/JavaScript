@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="https://static-00.iconduck.com/assets.00/timer-icon-449x512-lavvkq8n.png" type="image/x-icon">
+    <link rel="stylesheet" href="estilo.css">
+    <title>Timer Com Alarme</title>
+</head>
+<body>
+    <main>
+        <p id="data">00/00/0000</p>
+        <div id="relogio">00:00:00</div>
+        <p id="horaalarme">Hora do alarme:00:00:00</p>
+        <p>Tempo de alarme(segundos):</p>
+        <input type="number" name="inum" id="inum" min="1"> <!--Fazer um limitador para caso digite numero negativo seja alarmado que não pode-->
+        <div id="botoes"><button id="btn_ativar">ativar</button> <button id="btn_parar">Parar</button></div>
+    </main>
+    <script src="ex.js"></script>
+</body>
+</html>

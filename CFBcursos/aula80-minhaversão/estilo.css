@@ -1,0 +1,77 @@
+@charset "UTF-8";
+
+*{
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body{
+    display: flex;
+    width: 98vw;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+}
+
+main{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    flex-direction: column;
+    border: 3px solid rgb(71, 71, 71) ;
+    padding: 15px;
+    background-color: rgb(231, 231, 231);
+    border-radius: 7px;
+    box-shadow: 1px 2px 5px black;
+    width: 350px;
+}
+
+p{
+    font-size: 1.1em;
+}
+
+#data{
+    font-size: 1.1em;
+
+}
+
+#relogio{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 200px;
+    border-radius: 8px;
+    background-color: #444;
+    color: #0f0;
+    padding: 10px;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: larger;
+}
+
+#horaalarme{
+    margin: 2px 0px;
+}
+
+input[type='number']{
+    height: 40px;
+    border-radius: 8px;
+    width: 250px;
+    margin: 4px 0px;
+
+    padding: 0px 0px 0px 9px;
+    font-size: larger;
+}
+#botoes{
+    display: flex;
+
+
+}
+button{
+    background-color: rgb(194, 194, 194);
+    border-radius: 5px;
+    padding: 12px;
+    font-size: 1em;
+    margin: 0px 9px;
+}
