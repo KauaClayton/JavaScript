@@ -14,4 +14,3 @@ console.log(later.toUTCString())
 console.log(later.toLocaleDateString())
 console.log(later.toLocaleTimeString())
 console.log(later.toISOString())
-

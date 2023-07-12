@@ -9,10 +9,11 @@
     <title>Timer Com Alarme</title>
 </head>
 <body>
-    <main>
+    <main id="caixa">
         <p id="data">00/00/0000</p>
         <div id="relogio">00:00:00</div>
         <p id="horaalarme">Hora do alarme:00:00:00</p>
+        <audio src="Som de alarme.mp3" id="audio"></audio>
         <p>Tempo de alarme(segundos):</p>
         <input type="number" name="inum" id="inum" min="1"> <!--Fazer um limitador para caso digite numero negativo seja alarmado que não pode-->
         <div id="botoes"><button id="btn_ativar">ativar</button> <button id="btn_parar">Parar</button></div>
