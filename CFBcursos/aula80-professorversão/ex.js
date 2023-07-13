@@ -13,19 +13,34 @@ let alarme_ativado =false
 let alarme_tocando = false
 
 btn_ativar.addEventListener('click', ()=>{
-
-})
-btn_parar.addEventListener('click', ()=>{
     ts_atual = Date.now()
     ts_alarme=ts_atual+(tmp_alarme.value*1000)
+
     alarme_ativado = true
     const dt_alarme = new Date(ts_alarme)
     hora_alarme.innerHTML='Hora do Alarme:'+dt_alarme.getHours() + ':' + dt_alarme.getMinutes() + ':' + dt_alarme.getSeconds()
 })
+btn_parar.addEventListener('click', ()=>{
+    alarme_ativado = false
+    alarme_tocando = false 
+    hora_alarme.innerHTML = 'Hora do Alarme:'
+    tmp_alarme.value = 0
+    timer.classList.remove('alarme')
+    som_alarme.pause()
+    som_alarme.currentTime = 0
+
+})
 const dados=()=>{  
     const data = new Date()
     div_data.innerHTML = data.toLocaleDateString()
-    div_relogio.innerHTML = data.toLocaleTimeString() 
+    div_relogio.innerHTML = data.toLocaleTimeString()
+    if(alarme_ativado && !alarme_tocando){
+            if(data.getTime() >= ts_alarme){
+                alarme_tocando = true
+                som_alarme.play()
+                timer.classList.add('alarme')
+            }
+    } 
 }
 setInterval(() => {
     dados()
