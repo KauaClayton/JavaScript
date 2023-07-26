@@ -12,12 +12,12 @@ class bola{
         this.diry = (Math.random()*10)>5?1:-1
         this.palco = palco
         this.arrayBolas = arrayBolas
-        this.Desenhar()
         this.id = Date.now() + '_' + Math.floor(Math.random()*100000000000)
+        this.Desenhar()
+        
         this.controle = setInterval(this.controlar, 10)
         
         this.eu = document.getElementById(this.id)
-        console.log(this.eu)
         num_bolas++
         num_objs.innerHTML = num_bolas
     }
@@ -27,7 +27,9 @@ class bola{
     remover=()=>{
         clearInterval(this.controle)
         bolas = bolas.filter((b)=>{
-            if(b.id != this.id)return b
+            if(b.id != this.id){
+                return b
+            }
         })
         this.eu.remove()
         bolas--
@@ -37,7 +39,7 @@ class bola{
         const div = document.createElement('div')
         div.setAttribute('id', this.id)
         div.setAttribute('class', 'bola')
-        div.setAttribute('style', `left:${this.px}; top:${this.py};width:${this.tam};height:${this.tam};background-color:rgb(${this.r}, ${this.g}, ${this.b}) `)
+        div.setAttribute('style', `left:${this.px}px; top:${this.py}px;width:${this.tam}px;height:${this.tam}px;background-color:rgb(${this.r}, ${this.g}, ${this.b}) `)
         this.palco.appendChild(div)
 
     }
@@ -60,8 +62,8 @@ class bola{
         this.colisãobordas()     
         this.px += this.dirx*this.velx
         this.py += this.diry*this.vely
-        this.eu.setAttribute('style', `left:${this.px}; top:${this.py};width:${this.tam};height:${this.tam};background-color:rgb(${this.r}, ${this.g}, ${this.b}) `)
-        if(this.posx > largura_palco || this.posy > altura_palco){
+        this.eu.setAttribute('style', `left:${this.px}px; top:${this.py}px;width:${this.tam}px;height:${this.tam}px;background-color:rgb(${this.r}, ${this.g}, ${this.b}) `)
+        if((this.posx > largura_palco )|| (this.posy > altura_palco)){
             this.remover()
         }
     }
@@ -94,6 +96,7 @@ btn_add.addEventListener('click', (evt)=>{
 })
 
 btn_remover.addEventListener('click', (evt)=>{
+    console.log(bolas)
     bolas.map((el)=>{
         el.remover()
     })
