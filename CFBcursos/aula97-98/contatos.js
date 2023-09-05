@@ -11,9 +11,9 @@ let contato ={
       const cont={
          nome: Novocontato.nome,
          telefone: Novocontato.telefone,
-         emailNovo: Novocontato.email
+         email: Novocontato.email
      }
-      contatos.push([cont])
+      contatos.push(cont)
       destinoDOM.innerHTML = ''
       contatos.forEach((c)=>{
          const div = document.createElement('div')
@@ -24,12 +24,15 @@ let contato ={
          p_telefone.innerHTML = c.telefone
          const p_email = document.createElement('p')
          p_email.innerHTML = c.email
+         const lixeira = document.createElement('div')
+         lixeira.classList.add('lixeira')
          div.appendChild(p_nome)
          div.appendChild(p_telefone)
          div.appendChild(p_email)
+         div.appendChild(lixeira)
          destinoDOM.appendChild(div)
       })
-   
+      
 
    }
 }
