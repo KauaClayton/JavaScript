@@ -1,0 +1,10 @@
+let nome = new String('Kaua Clayton')
+let nome2 = new String('Kaua')
+let sobrenome = new String(' Clayton')
+
+console.log(nome.endsWith('on'))
+console.log(nome.startsWith('K'))
+console.log(nome.includes('ua'))
+console.log(nome.repeat(4))
+console.log(String.fromCodePoint(75))
+console.log(nome)
