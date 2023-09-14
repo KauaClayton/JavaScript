@@ -2,18 +2,18 @@ let nome = 'gabipainel'
 let email = 'kauaclaytonng@gmail.com'
 let numeros = '1, 10, 100, 1000'
 
-// console.log(nome.search(/cLaYtOn/i))
-// console.log(nome.match(/A/gi))
-// console.log(nome.replace(/A/gi,'o' ))
-// console.log(nome.match(/[AC0]/gi))
-// console.log(nome.match(/[A-K|L-z|0-2]/gi))
+console.log(nome.search(/cLaYtOn/i))
+console.log(nome.match(/A/gi))
+console.log(nome.replace(/A/gi,'o' ))
+console.log(nome.match(/[AC0]/gi))
+console.log(nome.match(/[A-K|L-z|0-2]/gi))
 
-// //meta caracteres
-// console.log(nome.match(/\d/gi)) //nums
-// console.log(nome.match(/\s/gi))
-// console.log(nome.match(/\bK/gi))
+//meta caracteres
+console.log(nome.match(/\d/gi)) //nums
+console.log(nome.match(/\s/gi))
+console.log(nome.match(/\bK/gi))
 
-//quantificadores
+
 
 console.log(nome.match(/a+/gi))
 console.log(nome.match(/ua*/gi))
