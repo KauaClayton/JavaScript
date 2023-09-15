@@ -26,8 +26,8 @@ button{
 
 .carro{
 
-    background-color: #f00;
-    width: 100px;
-    height: 40px;
+    background: url('https://static.vecteezy.com/system/resources/previews/010/792/482/non_2x/cute-rabbit-head-cartoon-element-free-png.png') center center no-repeat scroll;
+    /* height: 100px; */
+    background-size: cover;
 
 }
