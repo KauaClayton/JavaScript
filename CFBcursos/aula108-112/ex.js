@@ -5,6 +5,8 @@ let anima = null
 let tamax = null
 let tamcarro = null
 dir = 1
+let propriedadescarro = carro.getBoundingClientRect()
+
 
 const init=()=>{
     carro.style='position:relative; left:0px; width:100px; height:100px'
@@ -21,7 +23,7 @@ const inter=()=>{
         dir = -1
        }
     if(dir<0 && parseInt(carro.style.left) >= 0){
-        carro.style.left = parseInt(carro.style.left) + (10*dir) + 'px'
+        carro.style.left = parseInt(propriedadescarro.left) + (10*dir) + 'px'
     }
     else{
         dir = 1
@@ -56,3 +58,5 @@ window.addEventListener('keydown', (evt)=>{
     tamax = window.innerWidth - tamcarro
 })
 
+parar.accessKey = 's'
+play.accessKey = 'e'
