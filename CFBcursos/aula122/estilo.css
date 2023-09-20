@@ -7,11 +7,6 @@
     box-sizing: border-box;
 }
 
-form{
-    display: flex;
-    width: 300px;
-    flex-direction: column;
-}
 input{
     border: 3px solid #aaa;
     border-radius: 5px;

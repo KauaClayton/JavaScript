@@ -3,11 +3,12 @@ const f_nota = document.querySelector('#f_nota');
 const f_msg = document.querySelector('#f_msg');
 
 document.querySelector('#btn_validar').addEventListener('click',(evt)=>{;
-    let msg = null;
-    if(!f_nota.checkValidity()){;
-        msg =f_nota.validationMessage;
+    let estadoval = f_nota.validity;
+    if(estadoval.valueMissing){;
+        f_nota.setCustomValidity('value missing')
     };
+    f_nota.reportValidity()
+    f_msg.innerHTML = f_nota.validationMessage
 
-    f_msg.innerHTML = msg;
     evt.preventDefault();
 });
