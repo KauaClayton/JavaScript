@@ -1,3 +1,6 @@
-const endpoint = 'https://cfbcursos--kauaclaytonng.repl.co'
+const endpoint = 'https://cfbcursos.kauaclaytonng.repl.co/'
 let res = fetch(endpoint)
-console.log(res)
+.then(res=>res.json())
+.then(dados=>{
+    console.log(dados)
+})
