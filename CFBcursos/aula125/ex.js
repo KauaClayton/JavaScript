@@ -1,6 +1,7 @@
 const p_temperatura = document.querySelector('#p_temperatura')
 const p_nivel = document.querySelector('#p_nivel')
 const p_pressao = document.querySelector('#p_pressao')
+const texto = document.querySelector('#btn_texto')
 const obter_dados = ()=>{
     const endpoint = 'https://cfbcursos.kauaclaytonng.repl.co/'
     let res = fetch(endpoint)
@@ -34,3 +35,7 @@ const gravardados=()=>{
         console.log(res)
     })
 }
+
+texto.addEventListener('click', ()=>{
+    gravardados()
+})
