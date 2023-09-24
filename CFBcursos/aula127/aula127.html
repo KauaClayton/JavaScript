@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="estilo.css">
+    <title>Aula 127</title>
+</head>
+<body>
+    <canvas id="gráfico1" style="width:500px; height:500px;"> </canvas>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script>
+        const ctx = document.getElementById('gráfico1');
+        let valorex = ['Brasil', 'USA', 'África do SUl', 'Japão']
+        new Chart(ctx, {
+          type: 'bar',
+          data: {
+            labels: valorex,
+            datasets: [{
+              label: '# of Votes',
+              data: [1, 2, 3, 4, 5, 6],
+              borderWidth: 1
+            }]
+          },
+          options: {
+            scales: {
+              y: {
+                beginAtZero: true
+              }
+            }
+          }
+        });
+      </script>
+       
+</body>
+</html>
