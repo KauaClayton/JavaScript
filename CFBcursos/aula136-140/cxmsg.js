@@ -2,10 +2,15 @@ class Cxmsg{
     static cor='#888'
     static destino=null
     static divmsg = null
-    static config(config){
+    static tipo = null
+    static comandoS = null
+    static textos = []
+    
+    static mostrar=(config, titulo, texto)=>{ 
         this.cor=config.cor
-    }
-    static mostrar=(titulo, texto)=>{ 
+        this.tipo = config.tipo
+        this.textos = config.textos
+        this.comandoS =()=>{ config.comandoS()}
         this.titulo = titulo
         this.texto = texto
         this.destino = document.body
@@ -73,21 +78,47 @@ class Cxmsg{
        const rodape = document.createElement('div')
        rodape.setAttribute('style', estilorodape)
        areacxmsg.appendChild(rodape)
-
-       const btn_ok = document.createElement('button')
-       const estilobotao=
-       'background-color:'+this.cor+';'+
-       'color:#fff;'+
-       'padding:10px 50px;'+
-       'border-radius:5px;'+
-       'cursor:pointer;'+
-       'text-transform:uppercase;'    
-       btn_ok.setAttribute('style', estilobotao)
-       btn_ok.innerHTML = 'OK'
-       rodape.appendChild(btn_ok)
-       btn_ok.addEventListener('click',()=>{
-            this.ocultar()
+       if(this.tipo == 'ok'){
+          const btn_ok = document.createElement('button')
+          const estilobotao=
+          'background-color:'+this.cor+';'+
+          'color:#fff;'+
+          'padding:10px 50px;'+
+          'border-radius:5px;'+
+          'cursor:pointer;'+
+          'text-transform:uppercase;'    
+          btn_ok.setAttribute('style', estilobotao)
+          btn_ok.innerHTML = 'OK'
+          rodape.appendChild(btn_ok)
+          btn_ok.addEventListener('click',()=>{
+               this.ocultar()
        })
+     }
+     else if(this.tipo = 'sn'){
+          const btn_sim = document.createElement('button')
+          const estilobotao=
+          'background-color:'+this.cor+';'+
+          'color:#fff;'+
+          'padding:5px 25px;'+
+          'border-radius:5px;'+
+          'cursor:pointer;'+
+          'text-transform:uppercase;'   
+          btn_sim.setAttribute('style', estilobotao)
+          btn_sim.innerHTML = this.textos[0]
+          rodape.appendChild(btn_sim)
+          const btn_nao = document.createElement('button')
+              
+          btn_nao.setAttribute('style', estilobotao)
+          btn_nao.innerHTML = this.textos[1]
+          rodape.appendChild(btn_nao)
+          btn_sim.addEventListener('click', ()=>{
+               this.comandoS()
+               this.ocultar()
+          })
+          btn_nao.addEventListener('click', ()=>{
+               this.ocultar()
+          })
+     }
     }
     static ocultar=()=>{
         this.divmsg.remove()
