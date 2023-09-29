@@ -1,16 +1,14 @@
 class Cxmsg{
-    titulo=null
-    texto=null
-    cor=null
-    destino=null
-    divmsg = null
-    constructor(config){
-        this.titulo=config.titulo
-        this.texto=config.texto
+    static cor='#888'
+    static destino=null
+    static divmsg = null
+    static config(config){
         this.cor=config.cor
-        this.destino = document.body
     }
-    mostrar=()=>{ 
+    static mostrar=(titulo, texto)=>{ 
+        this.titulo = titulo
+        this.texto = texto
+        this.destino = document.body
         this.divmsg=document.createElement('div')
         const estilo_divmsg = 
             "display: flex;"+
@@ -36,7 +34,7 @@ class Cxmsg{
             areacxmsg.setAttribute('style', estilo_areaCxmsg)
             this.divmsg.appendChild(areacxmsg)
 
-       const titulo = document.createElement('div')
+       const titulo1 = document.createElement('div')
        const estilotitulo=
             'display: flex;'+
             'justify-content: flex-start;'+
@@ -46,12 +44,54 @@ class Cxmsg{
             'color:#fff;'+
             'padding:5px;'+
             'border-radius:5px 5px 0px 0px'
-       titulo.setAttribute('style', estilotitulo)
-       titulo.innerHTML = this.titulo
-       areacxmsg.appendChild(titulo)
+       titulo1.setAttribute('style', estilotitulo)
+       titulo1.innerHTML = this.titulo
+       areacxmsg.appendChild(titulo1)
 
+       const estilocorpo =
+            'display: flex;'+
+            'justify-content: flex-start;'+
+            'align-items:center;'+
+            'width:100%;'+
+            'background-color:#eee;'+
+            'color:#000;'+
+            'padding:30px 5px;'
+       const corpo = document.createElement('div')
+       corpo.setAttribute('style', estilocorpo)
+       corpo.innerHTML = this.texto
+       areacxmsg.appendChild(corpo)
 
-        
+       const estilorodape = 
+            'display:flex;'+
+            'justify-content: space-around;'+
+            'align-items: center;'+
+            'width:100%;'+
+            'background-color:#ccc;'+
+            'color:#000;'+
+            'padding:5px;'+
+            'border-radius:0px 0px 5px 5px;'
+       const rodape = document.createElement('div')
+       rodape.setAttribute('style', estilorodape)
+       areacxmsg.appendChild(rodape)
+
+       const btn_ok = document.createElement('button')
+       const estilobotao=
+       'background-color:'+this.cor+';'+
+       'color:#fff;'+
+       'padding:10px 50px;'+
+       'border-radius:5px;'+
+       'cursor:pointer;'+
+       'text-transform:uppercase;'    
+       btn_ok.setAttribute('style', estilobotao)
+       btn_ok.innerHTML = 'OK'
+       rodape.appendChild(btn_ok)
+       btn_ok.addEventListener('click',()=>{
+            this.ocultar()
+       })
     }
-    ocultar=()=>{}
+    static ocultar=()=>{
+        this.divmsg.remove()
+    }
 }
+
+export {Cxmsg}
