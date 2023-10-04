@@ -4,3 +4,50 @@
     border: none;
     box-sizing: border-box;
 }
+.fundologin{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    background-color: rgba(0,0,0,0.75);
+
+}
+
+.baselogin{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+}
+
+.elementoslogin{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    width: 50%;
+    background-color: #eee;
+}
+
+.logologin{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+    background-color: #bbb;
+
+}
+
+.logologin img{
+    width: 90%;
+    
+}
+/* formatação tela login */
+
+
+
+/* *************************** */
