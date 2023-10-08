@@ -1,12 +1,13 @@
+
+
 class Login{
-    static mat=null;
-    static pas=null;
+
     static logado = false;
     static matlogado = null;
     static nomelogado = null;
     static acessologado = null;
     static estilocss = null;
-    static  endpoint = 'https://login.kauaclaytonng.repl.co';
+    static endpoint =  null;
         
     static config ={
         cor:'#048',
@@ -18,7 +19,7 @@ class Login{
         }
         
 
-        this.endpoint+=`?matricula=${mat}&senha=${pas}`;
+        
         this.estilocss = 
         '.fundologin{display: flex;justify-content: center;align-items: center;width: 100%;height: 100vh;position: absolute;top: 0px;left: 0px;background-color: rgba(0,0,0,0.75);box-sizing: border-box;}'+
         '.baselogin{display: flex;justify-content: center;align-items: stretch;width: 50%;box-sizing: border-box;}'+     
@@ -82,6 +83,9 @@ class Login{
             btn_login.setAttribute('class', 'btn_login')
             btn_login.innerHTML = 'Login'
             botoeslogin.appendChild(btn_login)
+            btn_login.addEventListener('click',()=>{ 
+                        this.verificalogin()
+            })
             const btn_cancelar = document.createElement('button')
             btn_cancelar.setAttribute('id', 'btn_cancelar')
             btn_cancelar.setAttribute('class', 'btn_cancelar')
@@ -98,6 +102,32 @@ class Login{
 
 
     };
+
+    static verificalogin=()=>{
+        const mat=document.querySelector('#iusername').value;
+        const pas=document.querySelector('#isenha').value;
+
+        const endpoint = `https://login.kauaclaytonng.repl.co/?matricula=${mat}&senha=${pas}`
+        fetch(endpoint)
+        .then(res=>res.json())
+        .then(res=>{
+            if(res){
+                this.logado=true;
+                this.matlogado=mat;
+                this.nomelogado=res.nome;
+                this.acessologado =res.acesso;
+                this.fechar()
+            }
+            else{
+
+            }
+           
+        })
+        // if(mat=='123' && pas=='321'){
+        //     console.log('ye')
+        //     return true;}
+        // else{return false}
+    }
     static fechar=()=>{
        const id_fundologin = document.getElementById('fundologin')
        id_fundologin.remove()
