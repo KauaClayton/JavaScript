@@ -12,11 +12,11 @@ class Login{
     static endpoint =  null;
         
     static config ={
-        cor:'#048',
-        img:"https://cfbcursos.com.br/wp-content/uploads/2023/07/logo_cfbcursos.png"
+        cor:null,//'#048',
+        img:null,//"https://cfbcursos.com.br/wp-content/uploads/2023/07/logo_cfbcursos.png",
+        endpoint:null//"https://login.kauaclaytonng.repl.co/"
     }
-    static endpoint = "https://login.kauaclaytonng.repl.co/"
-    static login=(callbackok,callbacknot,config=null)=>{
+    static login=(callbackok,callbacknot,config)=>{
         if(config != null){
             this.config = config;
         }
@@ -101,32 +101,29 @@ class Login{
             baselogin.appendChild(logologin)
             const img = document.createElement('img')
             img.setAttribute('src', this.config.img)
-
-
-
     };
 
     static verificalogin=()=>{
         const mat=document.querySelector('#iusername').value;
         const pas=document.querySelector('#isenha').value;
 
-        const endpoint = `https://login.kauaclaytonng.repl.co/?matricula=${mat}&senha=${pas}`
+        const endpoint = `${this.config.endpoint}/?matricula=${mat}&senha=${pas}`
         fetch(endpoint)
         .then(res=>res.json())
         .then(res=>{
             if(res){
-                this.logado=true;
-                this.matlogado=mat;
-                this.nomelogado=res.nome;
-                this.acessologado =res.acesso;
+                sessionStorage.setItem('logado', 'true')
+                sessionStorage.setItem('matlogado', mat)
+                sessionStorage.setItem('nomelogado',res.nome)
+                sessionStorage.setItem('acessologado', res.acessologado)
                 this.callbackok()
                 this.fechar()
             }
             else{
-                this.logado=false;
-                this.matlogado=null;
-                globalThis.nomelogado =null;
-                this.acessologado = null;
+                sessionStorage.setItem('logado', 'false')
+                sessionStorage.setItem('matlogado', '')
+                sessionStorage.setItem('nomelogado', '')
+                sessionStorage.setItem('acessologado', '')
                 this.callbacknot()
             }
            
