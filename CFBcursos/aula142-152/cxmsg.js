@@ -24,7 +24,8 @@ class Cxmsg{
             "left: 0px;" +
             "width: 100%;"+
             "height: 100vh;"+
-            "background-color: rgba(0,0,0,0.7);"
+            "background-color: rgba(0,0,0,0.7);"+
+            "z-index:9999999999999999999999999"
          this.divmsg.setAttribute('id', 'divmsg')
          this.divmsg.setAttribute('style',estilo_divmsg)
          this.destino.prepend(this.divmsg)

@@ -6,6 +6,8 @@ class Login{
     static matlogado = null;
     static nomelogado = null;
     static acessologado = null;
+    static callbackok =null;
+    static callbacknot = null;
     static estilocss = null;
     static endpoint =  null;
         
@@ -13,12 +15,13 @@ class Login{
         cor:'#048',
         img:"https://cfbcursos.com.br/wp-content/uploads/2023/07/logo_cfbcursos.png"
     }
-    static login=(config=null)=>{
+    static endpoint = "https://login.kauaclaytonng.repl.co/"
+    static login=(callbackok,callbacknot,config=null)=>{
         if(config != null){
             this.config = config;
         }
-        
-
+        this.callbackok=()=>{callbackok()}
+        this.callbacknot=()=>{callbacknot()}
         
         this.estilocss = 
         '.fundologin{display: flex;justify-content: center;align-items: center;width: 100%;height: 100vh;position: absolute;top: 0px;left: 0px;background-color: rgba(0,0,0,0.75);box-sizing: border-box;}'+
@@ -116,10 +119,15 @@ class Login{
                 this.matlogado=mat;
                 this.nomelogado=res.nome;
                 this.acessologado =res.acesso;
+                this.callbackok()
                 this.fechar()
             }
             else{
-
+                this.logado=false;
+                this.matlogado=null;
+                globalThis.nomelogado =null;
+                this.acessologado = null;
+                this.callbacknot()
             }
            
         })
@@ -137,4 +145,3 @@ class Login{
     }
 };
 
-export {Login};
