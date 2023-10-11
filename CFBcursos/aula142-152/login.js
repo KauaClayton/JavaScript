@@ -14,7 +14,7 @@ class Login{
     static config ={
         cor:null,//'#048',
         img:null,//"https://cfbcursos.com.br/wp-content/uploads/2023/07/logo_cfbcursos.png",
-        endpoint:null//"https://login.kauaclaytonng.repl.co/"
+        endpoint:'https://login.kauaclaytonng.repl.co/'//""
     }
     static login=(callbackok,callbacknot,config)=>{
         if(config != null){
@@ -107,7 +107,7 @@ class Login{
         const mat=document.querySelector('#iusername').value;
         const pas=document.querySelector('#isenha').value;
 
-        const endpoint = `${this.config.endpoint}/?matricula=${mat}&senha=${pas}`
+        const endpoint = `${this.config.endpoint}?matricula=${mat}&senha=${pas}`;
         fetch(endpoint)
         .then(res=>res.json())
         .then(res=>{
