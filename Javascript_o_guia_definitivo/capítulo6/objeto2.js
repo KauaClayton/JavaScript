@@ -4,5 +4,6 @@ pessoa={
 
 var y = pessoa
 y.nome = 'pedro'
-console.log(pessoa.nome)
+
+console.log(Object.prototype.isPrototypeOf(pessoa))
 
