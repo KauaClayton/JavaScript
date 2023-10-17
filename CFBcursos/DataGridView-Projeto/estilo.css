@@ -1,0 +1,46 @@
+@charset "UTF-8";
+
+*{
+    margin: 0px;
+    padding:0px;
+    box-sizing: border-box;
+    border: none;    
+}
+
+.dvg{
+    
+}
+
+thead {
+   background-color: #138;  
+   color: #fff;
+   
+}
+
+th{
+    border-radius: 5px 5px 0px 0px;
+    padding: 5px;
+}
+
+td{
+    padding: 5px;
+}
+tbody{
+      
+}
+
+.c1{
+    width: 100px;
+}
+.c2{
+    width: 150px;
+}
+.c3{
+    width: 150px;
+}
+.c4{
+    width: 150px;
+}
+.c5{
+    width: 100px;
+}
